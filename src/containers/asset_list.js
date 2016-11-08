@@ -4,10 +4,14 @@ import { connect } from 'react-redux';
 class AssetList extends Component {
   renderAsset(assetData) {
     const name = assetData.data.map(thing => thing.asset);
+    const issuer = assetData.data.map(thing => thing.issuer);
+    const owner = assetData.data.map(thing => thing.owner);
     const description = assetData.data.map(thing => thing.description);
     return (
-      <tr key={name}>
+      <tr className="asset-items" key={name}>
         <td>{name}</td>
+        <td>{issuer}</td>
+        <td>{owner}</td>
         <td>{description}</td>
       </tr>
     );
