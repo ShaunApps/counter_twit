@@ -5,6 +5,8 @@ import '../style/counter.css';
 
 import SearchBar from './containers/search_bar';
 import AssetList from './containers/asset_list.js';
+import BroadcastList from './containers/broadcast_list.js';
+
 
 class App extends Component {
   render() {
@@ -17,6 +19,7 @@ class App extends Component {
       <div className="Main">
         <SearchBar />
         <AssetList />
+        <BroadcastList />
       </div>
       </div>
     );
