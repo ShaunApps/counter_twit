@@ -5,6 +5,10 @@ import { bindActionCreators } from 'redux';
 
 
 class BroadcastList extends Component {
+  constructor(props) {
+    super(props);
+  }
+  
   componentWillMount() {
     this.props.fetchBroadcasts();
   }

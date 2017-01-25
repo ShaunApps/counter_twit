@@ -22,6 +22,7 @@ export function fetchAsset(name) {
 
 export function fetchBroadcasts() {
   const broadcast_request = axios.get(BROADCAST_URL);
+  console.log(broadcast_request);
 
   return {
     type: FETCH_BROADCASTS,
