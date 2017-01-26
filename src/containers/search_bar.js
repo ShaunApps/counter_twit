@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { fetchAsset } from '../actions/index';
 
+import { Button } from 'react-materialize';
+
 class SearchBar extends Component {
   constructor(props) {
     super(props);
@@ -27,14 +29,14 @@ class SearchBar extends Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.onFormSubmit} className="input-group">
+        <form onSubmit={this.onFormSubmit} className="input-group search-bar">
           <input
             placeholder="Get information about a selected asset"
             className="form-control"
             value={this.state.term}
             onChange={this.onInputChange} />
           <span className="input-group-btn">
-            <button type="submit" className="btn btn-secondary">Submit</button>
+            <Button bsStyle="primary" type="submit">Submit</Button>
           </span>
         </form>
       </div>
