@@ -4,13 +4,15 @@
 }
 
 .asset-items td {
-  padding: 30px;
+  padding-top: 10px;
+  padding-bottom: 15px;
   padding-right: 15px;
   text-align: left;
 }
 
 .search-bar {
   margin: 20px;
-  margin-bottom: 25px;
+  margin-bottom: 50px;
+  width: 75%;
 
 }
