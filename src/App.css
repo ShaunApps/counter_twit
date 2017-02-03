@@ -1,11 +1,14 @@
 .Main {
   padding: 50px;
   margin-bottom: 20px;
+  flex: 1 0 auto;
 
 }
 
 .App {
-  text-align: center;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 .App-logo {

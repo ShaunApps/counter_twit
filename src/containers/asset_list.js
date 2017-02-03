@@ -24,7 +24,6 @@ class AssetList extends Component {
 
   render() {
     return (
-
         <Table className="bordered">
           <thead>
             <tr>

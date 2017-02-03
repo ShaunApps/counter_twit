@@ -7,6 +7,7 @@ import '.././style/counter.css';
 import NAVBAR from './components/navbar';
 import SearchBar from './containers/search_bar';
 import AssetList from './containers/asset_list.js';
+import FOOTER from './components/footer';
 
 
 
@@ -22,7 +23,7 @@ class App extends Component {
             <AssetList />
           </div>
         </div>
-
+        <FOOTER />
       </div>
     );
   }

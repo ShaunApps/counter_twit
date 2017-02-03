@@ -28,7 +28,7 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <div>
+      <div className="search-bar-comp">
         <form onSubmit={this.onFormSubmit} className="input-group search-bar">
           <input
             placeholder="Get information about a selected asset"

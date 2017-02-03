@@ -10,9 +10,21 @@
   text-align: left;
 }
 
+thead {
+  margin-bottom: 50px;
+}
+
+tbody {
+  margin-top: 20px;
+}
+
+.search-bar-comp {
+
+}
+
 .search-bar {
   margin: 20px;
   margin-bottom: 50px;
-  width: 75%;
+  /*width: 75%;*/
 
 }
