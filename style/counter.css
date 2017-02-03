@@ -10,12 +10,12 @@
   text-align: left;
 }
 
-thead {
-  margin-bottom: 50px;
+thead tr {
+  margin-bottom: 15px;
 }
 
 tbody {
-  margin-top: 20px;
+
 }
 
 .search-bar-comp {
@@ -27,4 +27,12 @@ tbody {
   margin-bottom: 50px;
   /*width: 75%;*/
 
+}
+
+nav {
+  background-color: #81d4fa;
+}
+
+footer.page-footer {
+  background-color: #81d4fa;
 }
