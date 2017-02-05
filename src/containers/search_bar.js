@@ -28,18 +28,21 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <div className="search-bar-comp">
-        <form onSubmit={this.onFormSubmit} className="input-group search-bar">
-          <input
-            placeholder="Get information about a selected asset"
-            className="form-control"
-            value={this.state.term}
-            onChange={this.onInputChange} />
-          <span className="input-group-btn">
-            <Button bsStyle="primary" type="submit">Submit</Button>
-          </span>
-        </form>
-      </div>
+      <div>
+        <h3 className="project-into">Enter Counterparty asset name below for asset information</h3>
+          <div className="search-bar-comp">
+            <form onSubmit={this.onFormSubmit} className="input-group search-bar">
+              <input
+                placeholder="Enter name here ex: 'PEPECASH'"
+                className="form-control"
+                value={this.state.term}
+                onChange={this.onInputChange} />
+              <span className="input-group-btn">
+                <Button bsStyle="primary" type="submit" waves="light">Submit</Button>
+              </span>
+            </form>
+          </div>
+        </div>
     )
   }
 }

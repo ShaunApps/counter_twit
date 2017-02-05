@@ -14,8 +14,8 @@ class AssetList extends Component {
     return (
       <tr className="asset-items" key={name}>
         <td>{name}</td>
-        <td>{issuer}</td>
-        <td>{owner}</td>
+        <td><a href={"https://blockscan.com/address/" + issuer}>{issuer}</a></td>
+        <td><a href={"https://blockscan.com/address/" + owner}>{owner}</a></td>
         <td>{description}</td>
       </tr>
     );
@@ -24,7 +24,8 @@ class AssetList extends Component {
 
   render() {
     return (
-        <Table className="bordered">
+      <div className="table-border">
+        <Table className="bordered responsive-table">
           <thead>
             <tr>
               <th>Asset</th>
@@ -37,6 +38,7 @@ class AssetList extends Component {
             {this.props.asset.map(this.renderAsset)}
           </tbody>
         </Table>
+      </div>
 
     );
   }
