@@ -21,6 +21,7 @@ class App extends Component {
           <div className="container">
             <SearchBar />
             <AssetList />
+            {this.props.children}
           </div>
         </div>
         <FOOTER />
