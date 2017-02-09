@@ -27,6 +27,7 @@ class AssetList extends Component {
   }
 
 
+
   render() {
     return (
       <div className="table-border">
