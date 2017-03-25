@@ -7,12 +7,12 @@ import '../.././style/counter.css';
 
 class AssetList extends Component {
   renderAsset(assetData) {
-    const name = assetData.data.map(thing => thing.asset);
-    const issuer = assetData.data.map(thing => thing.issuer);
-    const owner = assetData.data.map(thing => thing.owner);
-    const description = assetData.data.map(thing => thing.description);
-    const divisible =assetData.data.map(thing => thing.divisible);
-    const circulation = assetData.data.map(thing => thing.circulation);
+    const name = assetData.asset;
+    const issuer = assetData.issuer;
+    const owner = assetData.owner;
+    const description = assetData.description;
+    const divisible =assetData.divisible;
+    const circulation = assetData.supply;
 
     return (
       <tr className="asset-items" key={name}>

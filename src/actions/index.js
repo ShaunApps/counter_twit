@@ -15,18 +15,17 @@ export function fetchAsset(name) {
   const url = `${ASSET_ROOT_URL}&name=${name}`;
   const request = axios({
     method: 'post',
-    url: 'http://public.coindaddy.io:4000/api/',
+    url: 'http://public.coindaddy.io:4100/api/',
     headers: {'content-type': 'application/json-rpc'},
-    auth: {username: 'rpc', password: '1234'},
     data: JSON.stringify({
-        "method": "get_assets",
+        "method": "get_assets_info",
         "params": {
-             "filters": [{"field": "asset_name", "op": "==", "value": name}]
+          "assetsList": [name],
         },
         "jsonrpc": "2.0",
         "id": 0 })
     });
-
+    
   return {
     type: FETCH_ASSET,
     payload: request
