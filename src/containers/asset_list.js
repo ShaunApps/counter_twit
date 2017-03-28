@@ -1,37 +1,31 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
 import { Table } from 'react-materialize';
+import Asset from '../components/asset';
 
 import '../.././style/counter.css';
 
 class AssetList extends Component {
+
+
   renderAsset(assetData) {
     const name = assetData.asset;
     const issuer = assetData.issuer;
     const owner = assetData.owner;
     const description = assetData.description;
-    const divisible =assetData.divisible;
+    const divisible =assetData.divisible.toString();
     const circulation = assetData.supply;
 
     return (
-      <tr className="asset-items" key={name}>
-        <td className="asset-items-each">{name}</td>
-        <td className="asset-items-each"><a href={"https://blockscan.com/address/" + issuer}>{issuer}</a></td>
-        <td className="asset-items-each"><a href={"https://blockscan.com/address/" + owner}>{owner}</a></td>
-        <td className="asset-items-each">{description}</td>
-        <td className="asset-items-each">{divisible}</td>
-        <td className="asset-items-each">{circulation}</td>
-      </tr>
+      <Asset key={name} name={name} issuer={issuer} owner={owner} description={description} divisible={divisible} circulation={circulation} />
     );
   }
-
-
 
   render() {
     return (
       <div className="table-border">
-        <Table className="bordered responsive-table">
+        {this.props.asset.length > 0 && // only render the table header if there are assets
+        <Table className="responsive-table">
           <thead>
             <tr>
               <th className="asset-items-title">Asset</th>
@@ -46,6 +40,7 @@ class AssetList extends Component {
             {this.props.asset.map(this.renderAsset)}
           </tbody>
         </Table>
+        }
       </div>
 
     );
