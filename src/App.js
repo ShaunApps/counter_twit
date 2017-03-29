@@ -5,8 +5,7 @@ import './App.css';
 import '.././style/counter.css';
 
 import NAVBAR from './components/navbar';
-import SearchBar from './containers/search_bar';
-import AssetList from './containers/asset_list.js';
+import SearchAsset from './components/search_asset';
 import FOOTER from './components/footer';
 
 
@@ -19,8 +18,6 @@ class App extends Component {
         <NAVBAR />
         <div className="Main">
           <div className="container">
-            <SearchBar />
-            <AssetList />
             {this.props.children}
           </div>
         </div>

@@ -42,29 +42,6 @@ class Asset extends Component  {
 
 
 
-// const Asset = ({ name, issuer, owner, description, divisible, circulation }) => {
-//
-//     function onDeleteClick(e) {
-//       e.preventDefault();
-//       this.props.removeAsset(this.props.name);
-//       console.log(this.props.name);
-//     }
-//
-//     return (
-//       <tr className="asset-items" key={name}>
-//         <td className="asset-items-each">{name}</td>
-//         <td className="asset-items-each"><a href={"https://blockscan.com/address/" + issuer}>{issuer}</a></td>
-//         <td className="asset-items-each"><a href={"https://blockscan.com/address/" + owner}>{owner}</a></td>
-//         <td className="asset-items-each">{description}</td>
-//         <td className="asset-items-each">{divisible}</td>
-//         <td className="asset-items-each">{circulation}</td>
-//         <td className="asset-items-each">
-//           <button onClick={onDeleteClick} className="asset-items-each">X</button>
-//         </td>
-//       </tr>
-//     )
-// }
-
 
 
 function mapDispatchToProps(dispatch) {

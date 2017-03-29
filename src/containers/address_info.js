@@ -6,6 +6,7 @@ import { Table } from 'react-materialize';
 import '../.././style/counter.css';
 
 
-class AssetList extends Component {
-  
-}
+export const AddressInfo = () => {
+
+    return <div>Asset List Comp</div>;
+};

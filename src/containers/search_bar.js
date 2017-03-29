@@ -22,7 +22,7 @@ class SearchBar extends Component {
   onFormSubmit(event) {
     event.preventDefault();
 
-    this.props.fetchAsset(this.state.term);
+    this.props.fetchAsset(this.state.term.toUpperCase());
     this.setState({ term: '' });
   }
 
