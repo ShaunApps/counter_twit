@@ -14,7 +14,6 @@ import 'bootstrap/dist/css/bootstrap-theme.css';
 
 
 
-
 const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
 
 ReactDOM.render(

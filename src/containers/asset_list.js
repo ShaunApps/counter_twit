@@ -9,13 +9,13 @@ class AssetList extends Component {
 
 
   renderAsset(assetData) {
-    const name = assetData.asset;
+
+    const name = assetData.name;
     const issuer = assetData.issuer;
     const owner = assetData.owner;
     const description = assetData.description;
-    const divisible =assetData.divisible.toString();
-    const circulation = assetData.supply;
-
+    const divisible =assetData.divisible;
+    const circulation = assetData.circulation;
     return (
       <Asset key={name} name={name} issuer={issuer} owner={owner} description={description} divisible={divisible} circulation={circulation} />
     );
@@ -24,7 +24,7 @@ class AssetList extends Component {
   render() {
     return (
       <div className="table-border">
-        {this.props.asset.length > 0 && // only render the table header if there are assets
+        {this.props.asset.assets.length > 0 && // only render the table header if there are assets
         <Table className="responsive-table">
           <thead>
             <tr>
@@ -37,7 +37,7 @@ class AssetList extends Component {
             </tr>
           </thead>
           <tbody>
-            {this.props.asset.map(this.renderAsset)}
+            {this.props.asset.assets.map(this.renderAsset)}
           </tbody>
         </Table>
         }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { fetchAsset } from '../actions/index';
+import { fetchAsset, fetchAssetPrice } from '../actions/index';
 
 import { Button } from 'react-materialize';
 
@@ -23,6 +23,7 @@ class SearchBar extends Component {
     event.preventDefault();
 
     this.props.fetchAsset(this.state.term.toUpperCase());
+    this.props.fetchAssetPrice(this.state.term.toUpperCase());
     this.setState({ term: '' });
   }
 
@@ -50,7 +51,7 @@ class SearchBar extends Component {
 
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ fetchAsset }, dispatch);
+  return bindActionCreators({ fetchAsset, fetchAssetPrice }, dispatch);
 }
 
 export default connect(null, mapDispatchToProps)(SearchBar);
