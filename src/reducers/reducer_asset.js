@@ -13,6 +13,7 @@ function updateObject(oldObject, newValues) {
 
 export default function(state = initial_state, action) {
   switch (action.type) {
+
   case FETCH_ASSET:
     const returnedAsset = action.payload.data.result[0];
     const newAssets = state.assets.concat({
@@ -30,8 +31,15 @@ export default function(state = initial_state, action) {
     const removedAssetState = state.assets.filter(item => item.name !== nameID);
     return updateObject(state, { assets: removedAssetState});
 
+  // ***** make sure reducer is returning new state **** 
   case FETCH_ASSET_PRICE:
     console.log(action.payload.data.result[0].price_in_xcp);
+    const price_in_xcp = action.payload.data.result[0].price_in_xcp;
+    const addedXCPPricetoAssetState = state.assets(map(function(asset) {
+      if (asset.name === action.payload.data.result[0].asset) {
+        return asset.price_in_xcp = price_in_xcp;
+      }
+    }))
 
   default:
     return state;
