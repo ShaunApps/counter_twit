@@ -16,6 +16,9 @@ class AssetList extends Component {
     const description = assetData.description;
     const divisible =assetData.divisible;
     const circulation = assetData.circulation;
+    const price_in_xcp = assetData.price_in_xcp
+    // console.log(assetData);
+    // console.log("xcp: " + price_in_xcp);
     return (
       <Asset key={name} name={name} issuer={issuer} owner={owner} description={description} divisible={divisible} circulation={circulation} />
     );
